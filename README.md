@@ -12,7 +12,6 @@ A dynamic, interactive resume and portfolio site built with **React**, showcasin
 
 - **AI Image Classifier (TLCEngine)**  
   Full-stack web platform using React, Flask, MongoDB. Integrated LLaVA + Ollama for smart image tagging via RAG model.  
-  *(Link omitted for client confidentiality)*
 
 - **LibFuzzer Enhancement & Post-Fuzzing Analysis**  
   Extended LLVM LibFuzzer with custom crash clustering, heatmap-based code coverage visualization, and mutation analysis.  
