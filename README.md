@@ -2,7 +2,8 @@
 
 A dynamic, interactive resume and portfolio site built with **React**, showcasing key projects, technical skills, and cybersecurity/AI development experience.
 
-**Live Site**: [https://yourusername.github.io/about-me](https://yourusername.github.io/about-me)
+**Live Site**: **Live Site**: [https://ap11103.github.io/About-Me](https://ap11103.github.io/About-Me)
+
 
 **Download PDF Version**: Open the live site and press `Ctrl + P` or `Cmd + P` → Save as PDF.
 
@@ -45,15 +46,15 @@ Graduated with Honors
 ## How to Run Locally
 
 ```bash
-git clone https://github.com/ap11103/dynamic-resume.git
-cd dynamic-resume
+git clone https://github.com/ap11103/About-Me.git
+cd About-Me
 npm install
 npm start
 ```
 
 ---
 
-## ✉️ Contact
+## Contact
 
 Email: [patelalisha1003@gmail.com](mailto:patelalisha1003@gmail.com)  
 GitHub: [https://github.com/ap11103](https://github.com/ap11103)  
