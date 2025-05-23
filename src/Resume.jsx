@@ -1,8 +1,20 @@
 import { Card, CardContent } from "./components/card";
 import { Button } from "./components/button";
 import { Github, Mail, Download, Linkedin } from "lucide-react";
+import resumePDF from "./assets/AlishaPatel_Resume2.pdf";
+
 
 export default function Resume() {
+
+  const handlePDFDownload = () => {
+    const a = document.createElement("a");
+  a.href = "AlishaPatel_Resume2.pdf";
+  a.download = "AlishaPatel_Resume2.pdf";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+    };
+  
   return (
     <div className="resume-container mx-auto">
       <header className="resume-header text-center mb-10">
@@ -20,8 +32,10 @@ export default function Resume() {
           <a href="https://linkedin.com/in/alisha-patel11" target="_blank">
             <Button variant="outline"><Linkedin className="mr-2" /> LinkedIn</Button>
           </a>
-          <a href="/Alisha_Patel_Resume.pdf" download>
-            <Button variant="outline"><Download className="mr-2" /> PDF Resume</Button>
+          <a href={resumePDF} download>
+            <Button variant="outline">
+              <Download className="mr-2" /> PDF Resume
+            </Button>
           </a>
         </div>
         <div className="resume-links text-xs text-gray-700">
