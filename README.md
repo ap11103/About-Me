@@ -2,7 +2,7 @@
 
 A dynamic, interactive resume and portfolio site built with **React**, showcasing key projects, technical skills, and cybersecurity/AI development experience.
 
-**Live Site**: **Live Site**: [https://ap11103.github.io/About-Me](https://ap11103.github.io/About-Me)
+**Live Site**: [https://ap11103.github.io/About-Me](https://ap11103.github.io/About-Me)
 
 
 **Download PDF Version**: Open the live site and press `Ctrl + P` or `Cmd + P` → Save as PDF.
