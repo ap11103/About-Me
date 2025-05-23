@@ -1,0 +1,92 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9fafb;
+  color: #1f2937;
+  margin: 0;
+  padding: 0;
+}
+
+.resume-container {
+  background: white;
+  padding: 2.5rem 2rem;
+  margin: 0 auto 2rem auto; /* Top margin removed */
+  border-radius: 0.75rem;
+  max-width: 800px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.resume-header h1 {
+  font-size: 2.75rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.resume-header p {
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.resume-links a {
+  color: #2563eb;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-weight: 500;
+}
+
+.resume-links a:hover {
+  text-decoration: underline;
+}
+
+.resume-section {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.resume-section h2 {
+  color: #2563eb;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.resume-section ul {
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.resume-section h3 {
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.resume-section a {
+  color: #9333ea;
+  font-weight: 500;
+}
+
+/* 🔧 Print refinements */
+@media print {
+  body {
+    background: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+  }
+
+  .resume-container {
+    box-shadow: none !important;
+    margin-top: 0 !important;
+    padding-top: 1rem !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  a {
+    color: black !important;
+    text-decoration: none;
+  }
+}
