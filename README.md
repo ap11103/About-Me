@@ -59,3 +59,9 @@ npm start
 Email: [patelalisha1003@gmail.com](mailto:patelalisha1003@gmail.com)  
 GitHub: [https://github.com/ap11103](https://github.com/ap11103)  
 LinkedIn: [https://linkedin.com/in/alisha-patel11](https://linkedin.com/in/alisha-patel11)
+
+---
+
+**PDF Downloads**:
+- [Primary Resume](public/Resume.pdf)
+- [Alternate Resume](public/Resume_2.pdf)
