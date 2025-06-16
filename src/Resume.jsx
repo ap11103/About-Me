@@ -87,6 +87,16 @@ export default function Resume() {
       </section>
 
       <section className="resume-section">
+        <h2 className="text-2xl font-semibold text-blue-600 mb-2 border-b border-gray-300 pb-1 uppercase">Certifications</h2>
+        <div className="mb-2">
+          <p className="font-semibold text-gray-800">Cloud Security on AWS</p>
+          <p className="text-sm text-gray-700 italic">
+            Issued by Coursera & Edureka — June 2025
+          </p>
+        </div>
+      </section>
+
+      <section className="resume-section">
         <h2 className="text-2xl font-semibold text-blue-600 mb-2 border-b border-gray-300 pb-1 uppercase">Professional Experience</h2>
         <p className="font-semibold text-gray-800">Barista - QSR Livingston LLC <span className="float-right text-sm font-normal text-gray-600">Apr 2020 – Present</span></p>
         <p className="text-sm text-gray-700 leading-relaxed mt-1">
