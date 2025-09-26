@@ -53,7 +53,7 @@ export default function Resume() {
           <li><strong>Databases:</strong> MongoDB, SQL, Azure Blob Storage</li>
           <li><strong>Cloud & DevOps:</strong> Azure, Docker, GitHub Actions, Linux VM, SSH, Bash</li>
           <li><strong>Security & Analysis:</strong> Fuzzing, Crash Clustering, Static Analysis, Vulnerability Research, Coverage Instrumentation</li>
-          <li><strong>Currently Learning:</strong> AWS Cloud Security (Coursera), Terraform Projects</li>
+          <li><strong>Currently Learning:</strong> Terraform Projects, SOC Analysis & Incident Response</li>
         </ul>
       </section>
 
