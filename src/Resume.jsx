@@ -108,7 +108,6 @@ export default function Resume() {
 }
 */
 
-import { Card, CardContent } from "./components/card";
 import { Button } from "./components/button";
 import { Github, Mail, Download, Linkedin } from "lucide-react";
 import resumePDF from "./assets/AlishaPatel_Resume2.pdf";
@@ -116,12 +115,14 @@ import resumePDF from "./assets/AlishaPatel_Resume2.pdf";
 export default function Resume() {
   return (
     <div className="resume-container mx-auto">
+      {/* ==== Header ==== */}
       <header className="resume-header text-center mb-10">
         <h1 className="text-4xl font-bold tracking-tight text-gray-900">Alisha Patel</h1>
         <p className="text-base text-gray-600 italic mt-2 mb-4">
-          Cybersecurity Graduate • AI Projects • Fuzzing • Full Stack Developer
+          Cybersecurity Graduate • AI Projects • Full Stack Developer
         </p>
-        <div className="flex justify-center mt-2 mb-4 gap-4 flex-wrap">
+
+        <div className="flex justify-center mt-2 mb-4 gap-4 flex-wrap no-print">
           <a href="mailto:patelalisha1003@gmail.com">
             <Button variant="outline"><Mail className="mr-2" /> Email</Button>
           </a>
@@ -132,11 +133,10 @@ export default function Resume() {
             <Button variant="outline"><Linkedin className="mr-2" /> LinkedIn</Button>
           </a>
           <a href={resumePDF} download>
-            <Button variant="outline">
-              <Download className="mr-2" /> PDF Resume
-            </Button>
+            <Button variant="outline"><Download className="mr-2" /> PDF Resume</Button>
           </a>
         </div>
+
         <div className="resume-links text-xs text-gray-700">
           patelalisha1003@gmail.com | (973) 855-1614<br />
           <a className="text-blue-600 underline" href="https://github.com/ap11103" target="_blank" rel="noopener noreferrer">github.com/ap11103</a> |{" "}
@@ -157,37 +157,37 @@ export default function Resume() {
         </ul>
       </section>
 
-      {/* ==== Highlighted Projects (moved up) ==== */}
+      {/* ==== Projects ==== */}
       <section className="resume-section mt-8">
         <h2 className="text-2xl font-semibold text-blue-600 mb-2 border-b border-gray-300 pb-1 uppercase">Highlighted Projects</h2>
 
-        <div className="mb-6">
+        <div className="mb-5">
           <h3 className="text-lg font-bold text-gray-800">
             BankEase Financial Assistant <span className="text-sm font-normal text-gray-500 ml-2">(Jan 2025 – Apr 2025)</span>
           </h3>
           <p className="text-sm text-gray-700 leading-relaxed ml-4">
-            Built a financial dashboard web app using React and MUI with integrated MongoDB storage. Designed low-balance alerts, expense visualization, and heuristic-tested UI improvements for accessibility and intuitive interaction.
+            Built a responsive financial dashboard using React and MUI with MongoDB storage. Developed expense visualization, low-balance alerts, and heuristic-tested UI improvements for accessibility and intuitive interaction.
           </p>
           <a href="https://github.com/ap11103/BankEase" className="text-purple-600 underline ml-4" target="_blank" rel="noopener noreferrer">
             View Project
           </a>
         </div>
 
-        <div className="mb-6">
+        <div className="mb-5">
           <h3 className="text-lg font-bold text-gray-800">
             AI Image Classifier (TLCEngine) <span className="text-sm font-normal text-gray-500 ml-2">(Sep 2024 – May 2025)</span>
           </h3>
           <p className="text-sm text-gray-700 leading-relaxed ml-4">
-            Developed an AI-powered image classification platform with React and Flask, integrating LLaVA and Ollama models for intelligent tag generation. Used MongoDB and Excel for structured output and incorporated RAG-driven tagging pipelines with Postman-tested endpoints.
+            Developed a full-stack AI image-tagging platform integrating LLaVA and Ollama models for intelligent tag generation. Built Flask APIs, React frontend, and managed MongoDB/Excel outputs. Deployed on VM with RAG-based tagging pipelines.
           </p>
         </div>
 
         <div>
           <h3 className="text-lg font-bold text-gray-800">
-            LibFuzzer Enhancement and Crash Visualization <span className="text-sm font-normal text-gray-500 ml-2">(Mar 2025 – May 2025)</span>
+            LibFuzzer Enhancement & Crash Visualization <span className="text-sm font-normal text-gray-500 ml-2">(Mar 2025 – May 2025)</span>
           </h3>
           <p className="text-sm text-gray-700 leading-relaxed ml-4">
-            Enhanced LLVM LibFuzzer with crash clustering and mutation analysis tools, plus coverage heatmap visualization using Python, improving insight into fuzzing efficiency and test completeness.
+            Extended LLVM LibFuzzer with crash clustering and mutation analysis. Created Python heatmaps to visualize coverage and improve fuzzing efficiency.
           </p>
           <a href="https://github.com/ap11103/libfuzzer-analysis" className="text-purple-600 underline ml-4" target="_blank" rel="noopener noreferrer">
             View Project
@@ -195,40 +195,26 @@ export default function Resume() {
         </div>
       </section>
 
-      {/* ==== Professional Experience (moved down) ==== */}
+      {/* ==== Experience ==== */}
       <section className="resume-section mt-10">
         <h2 className="text-2xl font-semibold text-blue-600 mb-2 border-b border-gray-300 pb-1 uppercase">Professional Experience</h2>
 
-        {/* Heath project */}
-        <Card className="mb-4">
-          <CardContent className="p-4">
-            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
-              <p className="text-gray-800">
-                <strong>Contract Engineer – AI Vendor Assessment (Full-Stack/Backend)</strong> · <strong>CuratedCyber</strong>
-              </p>
-              <span className="text-sm font-normal text-gray-600">Sep 2025 – Nov 2025 · Remote</span>
-            </div>
-            <p className="mt-1 text-xs text-gray-600">
-              Tech: Python 3.11, Flask (API/CLI), Azure Blob Storage, Azure RBAC, OpenAI API (RAG), Markdown/PDF parsing, Git
-            </p>
-            <p className="mt-2 text-sm text-gray-700 leading-relaxed">
-              Developed a Python/Flask–based RAG pipeline to automate vendor due-diligence reviews by ingesting PDFs from Azure Blob Storage and generating standardized reports.
-              Implemented modular scripts for <em>ingestion, retrieval, projection, and export</em> with <code>.env</code>-based configuration and Azure RBAC integration.
-              Authored a concise permissions guide (e.g., <em>Storage Blob Data Contributor</em>) with screenshots to streamline stakeholder setup and unblock testing.
-              Designed JSON-aligned outputs mapped to the firm’s review outline and produced reviewer-ready drafts.
-              Standardized the repo for single-command reproducibility and future API/UI integration.
-            </p>
-          </CardContent>
-        </Card>
+        <div className="mb-5">
+          <p className="text-gray-800">
+            <strong>Contract Engineer – AI Vendor Assessment (Full-Stack/Backend)</strong> · <strong>CuratedCyber</strong>
+          </p>
+          <p className="text-sm text-gray-600 mt-0.5">Sep 2025 – Nov 2025 · Remote</p>
+          <p className="list-disc ml-5 mt-2 text-sm text-gray-700 leading-relaxed">
+            Developed a Python/Flask-based RAG pipeline to automate vendor due-diligence reviews from Azure Blob Storage. Implemented modular scripts for ingestion, retrieval, projection, and export with <code>.env</code>-based config and Azure RBAC.
+            Authored concise permissions guide (e.g., <em>Storage Blob Data Contributor</em>) to streamline access setup. Mapped extracted data to structured JSON aligned with the firm’s review outline and standardized repo for reproducibility.
+          </p>
+        </div>
 
-        {/* Barista role */}
         <div className="mb-2">
-          <p className="font-semibold text-gray-800">
-            <strong>Barista — QSR Livingston LLC</strong> </p>
-            <span className="float-right text-sm font-normal text-gray-600">Apr 2020 – Present</span>
-          
+          <p className="font-semibold text-gray-800"><strong>Barista — QSR Livingston LLC</strong></p>
+          <p className="text-sm text-gray-600 mt-0.5">Apr 2020 – Present · Livingston, NJ</p>
           <p className="text-sm text-gray-700 leading-relaxed mt-1">
-            Delivered high-quality customer service and maintained a clean, organized workspace while adhering to safety standards; built rapport with patrons to encourage repeat business.
+            Delivered high-quality customer service and maintained a clean, organized workspace while adhering to safety standards. Built rapport with patrons and supported team efficiency.
           </p>
         </div>
       </section>
@@ -239,17 +225,15 @@ export default function Resume() {
         <p className="font-semibold text-gray-800">Stevens Institute of Technology</p>
         <p className="italic text-sm text-gray-600">B.S. in Cybersecurity, May 2025 • Graduated with Honors</p>
         <p className="mt-2 text-sm text-gray-700 leading-relaxed">
-          <strong>Courses:</strong> Data Structures, Algorithms, Software Development, Operating System, System Programming, Introduction to Web Development, System Security, Database Management, Human-Computer Interaction (HCI), TCP/IP Networking, Special Topics in Cybersecurity, Wireless Systems Security, Financial Management in Cybersecurity, Information Security and Law
+          <strong>Relevant Courses:</strong> Data Structures, Algorithms, Software Development, System Security, Database Management, HCI, TCP/IP Networking, Wireless Systems Security, Information Security & Law
         </p>
       </section>
 
       {/* ==== Certifications ==== */}
       <section className="resume-section mt-10">
         <h2 className="text-2xl font-semibold text-blue-600 mb-2 border-b border-gray-300 pb-1 uppercase">Certifications</h2>
-        <div className="mb-2">
-          <p className="font-semibold text-gray-800">Cloud Security on AWS</p>
-          <p className="text-sm text-gray-700 italic">Issued by Coursera &amp; Edureka — June 2025</p>
-        </div>
+        <p className="font-semibold text-gray-800">Cloud Security on AWS</p>
+        <p className="text-sm text-gray-700 italic">Issued by Coursera &amp; Edureka — June 2025</p>
       </section>
     </div>
   );
