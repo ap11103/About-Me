@@ -8,11 +8,14 @@ body {
 
 .resume-container {
   background: white;
-  padding: 2.5rem 2rem;
-  margin: 0 auto 2rem auto; /* Top margin removed */
+  width: min(8.5in, 100%);
+  min-height: 11in;
+  padding: 0.45in 0.5in;
+  margin: 0 auto 2rem auto;
   border-radius: 0.75rem;
-  max-width: 800px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 .resume-header h1 {
@@ -26,10 +29,15 @@ body {
   margin-bottom: 1rem;
 }
 
+.resume-links {
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
 .resume-links a {
   color: #2563eb;
   text-decoration: none;
-  margin: 0 0.5rem;
+  margin: 0 0.35rem;
   font-weight: 500;
 }
 
@@ -39,8 +47,8 @@ body {
 
 .resume-section {
   border-top: 1px solid #e5e7eb;
-  padding-top: 1.5rem;
-  margin-top: 1.5rem;
+  padding-top: 0.8rem;
+  margin-top: 0.8rem;
 }
 
 .resume-section h2 {
@@ -66,19 +74,47 @@ body {
   font-weight: 500;
 }
 
-/* 🔧 Print refinements */
+.resume-container p,
+.resume-container li,
+.resume-container span,
+.resume-container div,
+.resume-container a {
+  overflow-wrap: anywhere;
+}
+
+@page {
+  size: letter;
+  margin: 0.55in;
+}
+
 @media print {
+  html,
   body {
-    background: white;
-    color: black;
-    margin: 0;
-    padding: 0;
+    background: white !important;
+    color: black !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  #root {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
   }
 
   .resume-container {
+    width: auto !important;
+    min-height: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
     box-shadow: none !important;
-    margin-top: 0 !important;
-    padding-top: 1rem !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
   }
 
   .no-print {
@@ -87,6 +123,6 @@ body {
 
   a {
     color: black !important;
-    text-decoration: none;
+    text-decoration: none !important;
   }
 }
